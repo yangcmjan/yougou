@@ -21,5 +21,16 @@
     </block>
   </swiper>
 
+<!-- 分页菜单 -->
+<view class="menus">
+<image src="{{item.image_src}}"
+mode="aspectFill"
+wx:for="{{menus}}"
+wx:key="{{index}}"
+>
+</image>
+
+</view>
+
 
 </view>
