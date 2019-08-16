@@ -1,19 +1,27 @@
-.search{
+/* 搜索框 */
+
+.search {
   padding: 20rpx;
   background: #ff2d4a;
 }
 
-.search-input{
+.search-input {
   height: 60rpx;
- display: flex;
- justify-content: center;
- align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background: #fff;
-  border-radius:4px; 
+  border-radius: 4px;
   font-size: 14px;
   color: #666;
 }
-.search-input icon{
+
+.search-input icon {
   margin-right: 10px;
-  
+}
+
+/* 轮播图 */
+.slide-image{
+  width: 750rps;
+  height: 350rpx;
 }

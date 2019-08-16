@@ -3,6 +3,23 @@
   <!-- 搜索 -->
   <view class="search">
     <view class="search-input">
-     <icon type="search" size="16"/>搜索</view>
+      <icon type="search" size="16" />搜索</view>
   </view>
+
+  <!-- 轮播图 -->
+  <swiper
+   indicator-dots
+   indicator-color="rgba(255,255,255,.3)" 
+   indicator-active-color="#fff"
+   autoplay="{{autoplay}}" >
+
+  <!-- block是一个伪元素，标签不会渲染到页面你上的，一般用于for循环 -->
+    <block wx:for="{{imgUrls}}" wx:key="{{index}}">
+      <swiper-item>
+        <image src="{{item.image_src}}" class="slide-image"  mode="aspectFill" />
+      </swiper-item>
+    </block>
+  </swiper>
+
+
 </view>
