@@ -9,7 +9,15 @@ Page({
   navs:[
     "电视", 
     "大家电",
-    "空调"
+    "空调",
+    "电视",
+    "大家电",
+    "空调", 
+    "电视",
+    "大家电",
+    "空调",
+    "电视",
+    "大家电"
   ],
   current:0
   },
@@ -24,7 +32,7 @@ Page({
 //菜单栏点击时候触发
   handleChange(event){
   const {index} =event.currentTarget.dataset
-  
+
   this.setData({
     current:index
   })
