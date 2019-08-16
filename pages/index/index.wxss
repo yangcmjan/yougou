@@ -1,8 +1,17 @@
-/* 搜索框 */
+.continer{
+  padding-top: 100rpx;
+}
 
+/* 搜索框 */
 .search {
   padding: 20rpx;
   background: #ff2d4a;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  box-sizing:border-box;
+  z-index: 99;
 }
 
 .search-input {
@@ -22,7 +31,7 @@
 
 /* 轮播图 */
 .slide-image{
-  width: 750rpx;
+  width: 100%;
   height: 340rpx;
 }
 

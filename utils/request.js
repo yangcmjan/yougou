@@ -39,26 +39,33 @@ const request = function(config = {}) {
 
   //返回一个promise,resole是成功的回调函数，reject是失败的回调函数
   return new Promise((resolve, rejest) => {
-    //发起小程序的请求
-    wx.request({
-      //把调用传入的对象解构
-      ...config,
 
-      success(res) {
-        //成功之后出发then的回调函数
-        resolve(res)
-      },
+     if(wx){
 
-      fail() {},
+       //发起小程序的请求
+       wx.request({
+         //把调用传入的对象解构
+         ...config,
 
-      //后台接口可能会自定义错误，错误的处理函数放到complete来执行
-      complete(res) {
-        //循环调用错误的错误函数
-        request.errors.forEach(fn=>{
-          fn(res);
-        })
-      },
-    })
+         success(res) {
+           //成功之后出发then的回调函数
+           resolve(res)
+         },
+
+         fail() { },
+
+         //后台接口可能会自定义错误，错误的处理函数放到complete来执行
+         complete(res) {
+           //循环调用错误的错误函数
+           request.errors.forEach(fn => {
+             fn(res);
+           })
+         },
+       })
+     }else{
+      // $.ajax()
+     }
+   
   })
 };
 

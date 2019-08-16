@@ -1,4 +1,4 @@
-<view>
+<view class="continer">
 
   <!-- 搜索 -->
   <view class="search">
