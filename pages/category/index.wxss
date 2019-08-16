@@ -1,6 +1,11 @@
 /* 固定头部搜索栏 */
+/* 固定了continer高度为100% */
 .continer{
-  padding-top: 100rpx;
+  position: absolute;
+  width: 100%;
+  top: 100rpx;
+  bottom: 0;
+ 
 }
 
 /* 搜索框 */
@@ -31,13 +36,21 @@
 }
 
 /*左侧带单栏  */
+/* 继承了continer高度，设置了定位为相对定位 */
 .main{
   display: flex;
   justify-content: space-between;
+  height: 100%;
+  position: relative;
 }
 
 .navs{
+  position: absolute;
+  left: 0;
+  top: 0;
   width: 200rpx;
+  height: 100%;
+  overflow: scroll;
   background: #f6f6f6;
 }
 
@@ -68,8 +81,14 @@
 
 /* 右边品牌栏 */
 .categorys{
+  position: absolute;
+  left: 200rpx;
+  right: 0;
+  height: 100%;
+  overflow: scroll;
   flex: 1;
   padding: 20rpx;
+  box-sizing: border-box;
 }
 
 .categorys-title{
