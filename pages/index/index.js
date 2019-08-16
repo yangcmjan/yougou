@@ -7,7 +7,9 @@
      //轮播图的对象，是个数组
      imgUrls: [],
      //菜单栏数据
-     menus:[]
+     menus:[],
+     //楼层数据
+     floors:[]
    },
 
    onLoad() {
@@ -36,6 +38,18 @@
          menus:message
        })
      })
+
+     //请求楼层数据
+     request({
+       url:"/home/floordata"
+     }).then(res=>{
+       const { message } = res.data
+       this.setData({
+          floors:message
+       })
+     })
+
+
    }
 
     

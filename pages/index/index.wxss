@@ -42,7 +42,7 @@
   margin-top: 20rpx;
 }
 
-.floor-tittle image{
+.floor-title image{
   width: 750rpx;
   height: 60rpx;
 }

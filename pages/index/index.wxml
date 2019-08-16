@@ -24,23 +24,20 @@
   </view>
 
   <!-- 楼层 -->
-  <view class="floor">
+  <view class="floor" wx:for="{{floors}}" wx:key="{{index}}">
     <!-- 楼层的标题 -->
-    <view class="floor-tittle">
-      <image src="https://api.zbztb.cn/pyg/pic_floor01_title.png"></image>
+    <view class="floor-title">
+      <image src="{{item.floor_title.image_src}}" mode="aspectFill"></image>
     </view>
     <!-- 楼层的内容 -->
     <view class="floor-content">
       <!--楼层左侧  -->
       <view class="floor-content-left">
-        <image src="https://api.zbztb.cn/pyg/pic_floor01_1@2x.png"></image>
+        <image src="{{item.product_list[0].image_src}}" mode="aspectFill"></image>
       </view>
       <!-- 楼层右侧 -->
       <view class="floor-content-right">
-      <image src="https://api.zbztb.cn/pyg/pic_floor01_2@2x.png"></image>
-      <image src="https://api.zbztb.cn/pyg/pic_floor01_2@2x.png"></image>
-      <image src="https://api.zbztb.cn/pyg/pic_floor01_2@2x.png"></image>
-      <image src="https://api.zbztb.cn/pyg/pic_floor01_2@2x.png"></image>
+        <image wx:for="{{item.product_list}}" wx:key="{{index}}" wx:if="{{index>0}}" src="{{item.image_src}}"  mode="aspectFill"></image>
       </view>
     </view>
 
