@@ -1,3 +1,5 @@
+ import request from "../../utils/request.js"
+
 // pages/category/index.js
 Page({
 
@@ -5,20 +7,9 @@ Page({
    * 页面的初始数据
    */
   data: {
-    //菜单栏
-  navs:[
-    "电视", 
-    "大家电",
-    "空调",
-    "电视",
-    "大家电",
-    "空调", 
-    "电视",
-    "大家电",
-    "空调",
-    "电视",
-    "大家电"
-  ],
+    //总数据
+    navs:[],
+  
   current:0
   },
 
@@ -26,6 +17,16 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function () {
+
+    request({
+      url:"/categories"
+    }).then(res=>{
+       const {message} =res.data
+
+       this.setData({
+        navs:message
+       })
+    })
 
   },
 
