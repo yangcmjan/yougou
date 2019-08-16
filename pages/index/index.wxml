@@ -7,30 +7,43 @@
   </view>
 
   <!-- 轮播图 -->
-  <swiper
-   indicator-dots
-   indicator-color="rgba(255,255,255,.3)" 
-   indicator-active-color="#fff"
-   autoplay="{{autoplay}}" >
+  <swiper indicator-dots indicator-color="rgba(255,255,255,.3)" indicator-active-color="#fff" autoplay="{{autoplay}}">
 
-  <!-- block是一个伪元素，标签不会渲染到页面你上的，一般用于for循环 -->
+    <!-- block是一个伪元素，标签不会渲染到页面你上的，一般用于for循环 -->
     <block wx:for="{{imgUrls}}" wx:key="{{index}}">
       <swiper-item>
-        <image src="{{item.image_src}}" class="slide-image"  mode="aspectFill" />
+        <image src="{{item.image_src}}" class="slide-image" mode="aspectFill" />
       </swiper-item>
     </block>
   </swiper>
 
-<!-- 分页菜单 -->
-<view class="menus">
-<image src="{{item.image_src}}"
-mode="aspectFill"
-wx:for="{{menus}}"
-wx:key="{{index}}"
->
-</image>
+  <!-- 分页菜单 -->
+  <view class="menus">
+    <image src="{{item.image_src}}" mode="aspectFill" wx:for="{{menus}}" wx:key="{{index}}">
+    </image>
+  </view>
 
-</view>
+  <!-- 楼层 -->
+  <view class="floor">
+    <!-- 楼层的标题 -->
+    <view class="floor-tittle">
+      <image src="https://api.zbztb.cn/pyg/pic_floor01_title.png"></image>
+    </view>
+    <!-- 楼层的内容 -->
+    <view class="floor-content">
+      <!--楼层左侧  -->
+      <view class="floor-content-left">
+        <image src="https://api.zbztb.cn/pyg/pic_floor01_1@2x.png"></image>
+      </view>
+      <!-- 楼层右侧 -->
+      <view class="floor-content-right">
+      <image src="https://api.zbztb.cn/pyg/pic_floor01_2@2x.png"></image>
+      <image src="https://api.zbztb.cn/pyg/pic_floor01_2@2x.png"></image>
+      <image src="https://api.zbztb.cn/pyg/pic_floor01_2@2x.png"></image>
+      <image src="https://api.zbztb.cn/pyg/pic_floor01_2@2x.png"></image>
+      </view>
+    </view>
 
+  </view>
 
 </view>
