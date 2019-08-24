@@ -1,5 +1,5 @@
 /* 固定头部搜索栏 */
-/* 固定了continer高度为100% */
+/* 1.固定了continer高度为100% */
 .continer{
   position: absolute;
   width: 100%;
@@ -36,7 +36,7 @@
 }
 
 /*左侧带单栏  */
-/* 继承了continer高度，设置了定位为相对定位 */
+/* 2.继承了continer高度，设置了定位为相对定位 */
 .main{
   display: flex;
   justify-content: space-between;
@@ -44,6 +44,7 @@
   position: relative;
 }
 
+/* 3.菜单栏的布局，高度继承了main的高度100%,为了出现滚动体需要脱离文档流 */
 .navs{
   position: absolute;
   left: 0;
@@ -79,7 +80,8 @@
   left: 0;
 }
 
-/* 右边品牌栏 */
+/* 右侧品牌栏 */
+/* 4.品牌栏的布局，高度继承了main的高度100%,为了出现滚动体需要脱离文档流 */
 .categorys{
   position: absolute;
   left: 200rpx;
